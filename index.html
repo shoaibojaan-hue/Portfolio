@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoaib Ahmed | YouTube Thumbnail Designer</title>
+  <meta name="description"
+    content="Professional YouTube Thumbnail Designer — High-CTR thumbnails for Documentary, Gardening, GeoPolitical, Tutorial & Psychology channels." />
+
+  <link rel="icon" type="image/png" href="images/my-pic-round.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ========== BACKGROUND CANVAS ========== -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ========== DYNAMIC ORBS ========== -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+  </div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <a href="#home" class="logo">
+      <div class="profile-frame">
+        <img src="images/my-pic.jpg" alt="Shoaib Ahmed">
+      </div>
+      <span>Shoaib Ahmed</span>
+    </a>
+
+    <div class="menu-icon" id="menu-icon">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span> Available for Projects</div>
+      <h1>High-Converting <br><span class="gradient-text">YouTube Thumbnails</span></h1>
+      <h3>I Help Creators Get More Clicks &amp; Views</h3>
+      <p>
+        I design professional thumbnails and visuals that increase CTR,
+        build strong branding, and make your videos stand out.
+      </p>
+      <div class="hero-stats">
+        <div class="stat"><strong>100+</strong><span>Thumbnails</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>+40%</strong><span>Avg CTR Lift</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>7</strong><span>Niches</span></div>
+      </div>
+      <div class="hero-btns">
+        <a href="#portfolio" class="btn">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn-outline">Hire Me</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="hero-image-glow"></div>
+      <img src="images/pprofilee.png" alt="Shoaib Designer">
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="services">
+    <div class="section-header">
+      <span class="section-tag">What I Do</span>
+      <h2 class="section-title">What I Offer</h2>
+      <p class="section-subtitle">Tailored visual solutions to elevate your digital presence</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon-wrap">
+          <div class="service-icon">🎬</div>
+        </div>
+        <h3>YouTube Thumbnails</h3>
+        <p>High-CTR thumbnails designed with psychological triggers to maximize clicks and views.</p>
+        <div class="card-shine"></div>
+      </div>
+
+      <div class="service-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="service-icon-wrap">
+          <div class="service-icon">🎨</div>
+        </div>
+        <h3>Channel Branding</h3>
+        <p>Strategic visual identity including banners and logos to build a recognizable brand.</p>
+        <div class="card-shine"></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon-wrap">
+          <div class="service-icon">💎</div>
+        </div>
+        <h3>Premium Graphics</h3>
+        <p>High-end social media assets and promotional visuals for professional creators.</p>
+        <div class="card-shine"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== PORTFOLIO ========== -->
+  <section id="portfolio" class="portfolio">
+    <div class="section-header">
+      <span class="section-tag">My Work</span>
+      <h2 class="section-title">Recent Work</h2>
+      <p class="section-subtitle">Premium thumbnails crafted for high-performance channels</p>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="portfolio-tabs" id="portfolio-tabs">
+      <!-- Liquid sliding pill -->
+      <div class="tab-slider" id="tab-slider"></div>
+      <button class="tab-btn active" data-tab="all">
+        <i class="fa-solid fa-grid-2"></i> All
+      </button>
+      <button class="tab-btn" data-tab="documentary">
+        <i class="fa-solid fa-film"></i> Documentary
+      </button>
+      <button class="tab-btn" data-tab="gardening">
+        <i class="fa-solid fa-seedling"></i> Gardening
+      </button>
+      <button class="tab-btn" data-tab="geopolitical">
+        <i class="fa-solid fa-globe"></i> GeoPolitical
+      </button>
+      <button class="tab-btn" data-tab="tutorial">
+        <i class="fa-solid fa-graduation-cap"></i> Tutorial
+      </button>
+      <button class="tab-btn" data-tab="psychological">
+        <i class="fa-solid fa-brain"></i> Psychological
+      </button>
+    </div>
+
+    <!-- ALL TAB: Marquee Showcase — 4 shuffled rows -->
+    <div class="tab-content active" id="tab-all">
+      <div class="portfolio-showcase">
+
+        <!-- ROW 1 → : Doc · Psy · Green · Geo · Tutor · mixed -->
+        <div class="marquee-row">
+          <div class="marquee-track auto-clone" id="row1">
+            <img src="Documentary Thumbnails/Doc Thumbnail (1).jpg" alt="Documentary">
+            <img src="psychological Thumbnail/psy Thumbnail (3).jpg" alt="Psychology">
+            <img src="Gardening Thumbnail/Green Thumbnail (5).jpg" alt="Gardening">
+            <img src="GeoPolitical Thumbnails/Geo Thumbnail (2).jpg" alt="GeoPolitical">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (7).jpg" alt="Tutorial">
+            <img src="Documentary Thumbnails/Doc Thumbnail (8).jpg" alt="Documentary">
+            <img src="Gardening Thumbnail/Green Thumbnail (9).jpg" alt="Gardening">
+            <img src="psychological Thumbnail/psy Thumbnail (6).jpg" alt="Psychology">
+            <img src="GeoPolitical Thumbnails/Geo Thumbnail (7).jpg" alt="GeoPolitical">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (12).jpg" alt="Tutorial">
+            <img src="Gardening Thumbnail/Green Thumbnail (2).jpg" alt="Gardening">
+            <img src="Documentary Thumbnails/Doc Thumbnail (5).jpg" alt="Documentary">
+          </div>
+        </div>
+
+        <!-- ROW 2 ← reverse : Tutor · Green · Geo · Doc · Psy · mixed -->
+        <div class="marquee-row reverse">
+          <div class="marquee-track auto-clone" id="row2">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (2).jpg" alt="Tutorial">
+            <img src="Gardening Thumbnail/Green Thumbnail (7).jpg" alt="Gardening">
+            <img src="GeoPolitical Thumbnails/Geo Thumbnail (4).jpg" alt="GeoPolitical">
+            <img src="Documentary Thumbnails/Doc Thumbnail (6).jpg" alt="Documentary">
+            <img src="psychological Thumbnail/psy Thumbnail (8).jpg" alt="Psychology">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (15).jpg" alt="Tutorial">
+            <img src="Gardening Thumbnail/Green Thumbnail (11).jpg" alt="Gardening">
+            <img src="Documentary Thumbnails/Doc Thumbnail (3).jpg" alt="Documentary">
+            <img src="GeoPolitical Thumbnails/Geo Thumbnail (9).jpg" alt="GeoPolitical">
+            <img src="psychological Thumbnail/psy Thumbnail (1).jpg" alt="Psychology">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (9).jpg" alt="Tutorial">
+            <img src="Gardening Thumbnail/Green Thumbnail (4).jpg" alt="Gardening">
+          </div>
+        </div>
+
+        <!-- ROW 3 → : Psy · Tutor · Doc · Green · Geo · mixed -->
+        <div class="marquee-row">
+          <div class="marquee-track auto-clone" id="row3">
+            <img src="psychological Thumbnail/psy Thumbnail (10).jpg" alt="Psychology">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (4).jpg" alt="Tutorial">
+            <img src="Documentary Thumbnails/Doc Thumbnail (9).jpg" alt="Documentary">
+            <img src="Gardening Thumbnail/Green Thumbnail (1).jpg" alt="Gardening">
+            <img src="GeoPolitical Thumbnails/Geo Thumbnail (6).jpg" alt="GeoPolitical">
+            <img src="psychological Thumbnail/psy Thumbnail (5).jpg" alt="Psychology">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (17).jpg" alt="Tutorial">
+            <img src="Gardening Thumbnail/Green Thumbnail (8).jpg" alt="Gardening">
+            <img src="Documentary Thumbnails/Doc Thumbnail (2).jpg" alt="Documentary">
+            <img src="GeoPolitical Thumbnails/Geo Thumbnail (1).jpg" alt="GeoPolitical">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (6).jpg" alt="Tutorial">
+            <img src="psychological Thumbnail/psy Thumbnail (7).jpg" alt="Psychology">
+          </div>
+        </div>
+
+        <!-- ROW 4 ← reverse : Geo · Doc · Psy · Tutor · Green · mixed -->
+        <div class="marquee-row reverse">
+          <div class="marquee-track auto-clone" id="row4">
+            <img src="GeoPolitical Thumbnails/Geo Thumbnail (3).jpg" alt="GeoPolitical">
+            <img src="Documentary Thumbnails/Doc Thumbnail (10).jpg" alt="Documentary">
+            <img src="psychological Thumbnail/psy Thumbnail (2).jpg" alt="Psychology">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (11).jpg" alt="Tutorial">
+            <img src="Gardening Thumbnail/Green Thumbnail (6).jpg" alt="Gardening">
+            <img src="GeoPolitical Thumbnails/Geo Thumbnail (8).jpg" alt="GeoPolitical">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (3).jpg" alt="Tutorial">
+            <img src="Documentary Thumbnails/Doc Thumbnail (7).jpg" alt="Documentary">
+            <img src="Gardening Thumbnail/Green Thumbnail (10).jpg" alt="Gardening">
+            <img src="psychological Thumbnail/psy Thumbnail (9).jpg" alt="Psychology">
+            <img src="Tutorial Thumbnails/Tutor Thumbnail (14).jpg" alt="Tutorial">
+            <img src="GeoPolitical Thumbnails/Geo Thumbnail (5).jpg" alt="GeoPolitical">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DOCUMENTARY TAB -->
+    <div class="tab-content" id="tab-documentary">
+      <div class="portfolio-grid">
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (1).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (1).jpg" alt="Doc Thumbnail 1">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (2).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (2).jpg" alt="Doc Thumbnail 2">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (3).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (3).jpg" alt="Doc Thumbnail 3">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (4).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (4).jpg" alt="Doc Thumbnail 4">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (5).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (5).jpg" alt="Doc Thumbnail 5">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (6).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (6).jpg" alt="Doc Thumbnail 6">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (7).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (7).jpg" alt="Doc Thumbnail 7">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (8).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (8).jpg" alt="Doc Thumbnail 8">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (9).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (9).jpg" alt="Doc Thumbnail 9">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Documentary Thumbnails/Doc Thumbnail (10).jpg"><img
+            src="Documentary Thumbnails/Doc Thumbnail (10).jpg" alt="Doc Thumbnail 10">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GARDENING TAB -->
+    <div class="tab-content" id="tab-gardening">
+      <div class="portfolio-grid">
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (1).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (1).jpg" alt="Green Thumbnail 1">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (2).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (2).jpg" alt="Green Thumbnail 2">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (3).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (3).jpg" alt="Green Thumbnail 3">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (4).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (4).jpg" alt="Green Thumbnail 4">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (5).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (5).jpg" alt="Green Thumbnail 5">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (6).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (6).jpg" alt="Green Thumbnail 6">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (7).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (7).jpg" alt="Green Thumbnail 7">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (8).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (8).jpg" alt="Green Thumbnail 8">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (9).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (9).jpg" alt="Green Thumbnail 9">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (10).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (10).jpg" alt="Green Thumbnail 10">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Gardening Thumbnail/Green Thumbnail (11).jpg"><img
+            src="Gardening Thumbnail/Green Thumbnail (11).jpg" alt="Green Thumbnail 11">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GEOPOLITICAL TAB -->
+    <div class="tab-content" id="tab-geopolitical">
+      <div class="portfolio-grid">
+        <div class="grid-item" data-src="GeoPolitical Thumbnails/Geo Thumbnail (1).jpg"><img
+            src="GeoPolitical Thumbnails/Geo Thumbnail (1).jpg" alt="Geo Thumbnail 1">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="GeoPolitical Thumbnails/Geo Thumbnail (2).jpg"><img
+            src="GeoPolitical Thumbnails/Geo Thumbnail (2).jpg" alt="Geo Thumbnail 2">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="GeoPolitical Thumbnails/Geo Thumbnail (3).jpg"><img
+            src="GeoPolitical Thumbnails/Geo Thumbnail (3).jpg" alt="Geo Thumbnail 3">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="GeoPolitical Thumbnails/Geo Thumbnail (4).jpg"><img
+            src="GeoPolitical Thumbnails/Geo Thumbnail (4).jpg" alt="Geo Thumbnail 4">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="GeoPolitical Thumbnails/Geo Thumbnail (5).jpg"><img
+            src="GeoPolitical Thumbnails/Geo Thumbnail (5).jpg" alt="Geo Thumbnail 5">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="GeoPolitical Thumbnails/Geo Thumbnail (6).jpg"><img
+            src="GeoPolitical Thumbnails/Geo Thumbnail (6).jpg" alt="Geo Thumbnail 6">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="GeoPolitical Thumbnails/Geo Thumbnail (7).jpg"><img
+            src="GeoPolitical Thumbnails/Geo Thumbnail (7).jpg" alt="Geo Thumbnail 7">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="GeoPolitical Thumbnails/Geo Thumbnail (8).jpg"><img
+            src="GeoPolitical Thumbnails/Geo Thumbnail (8).jpg" alt="Geo Thumbnail 8">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="GeoPolitical Thumbnails/Geo Thumbnail (9).jpg"><img
+            src="GeoPolitical Thumbnails/Geo Thumbnail (9).jpg" alt="Geo Thumbnail 9">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TUTORIAL TAB -->
+    <div class="tab-content" id="tab-tutorial">
+      <div class="portfolio-grid">
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (1).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (1).jpg" alt="Tutor Thumbnail 1">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (2).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (2).jpg" alt="Tutor Thumbnail 2">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (3).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (3).jpg" alt="Tutor Thumbnail 3">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (4).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (4).jpg" alt="Tutor Thumbnail 4">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (5).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (5).jpg" alt="Tutor Thumbnail 5">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (6).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (6).jpg" alt="Tutor Thumbnail 6">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (7).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (7).jpg" alt="Tutor Thumbnail 7">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (8).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (8).jpg" alt="Tutor Thumbnail 8">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (9).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (9).jpg" alt="Tutor Thumbnail 9">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (10).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (10).jpg" alt="Tutor Thumbnail 10">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (11).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (11).jpg" alt="Tutor Thumbnail 11">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (12).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (12).jpg" alt="Tutor Thumbnail 12">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (13).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (13).jpg" alt="Tutor Thumbnail 13">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (14).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (14).jpg" alt="Tutor Thumbnail 14">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (15).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (15).jpg" alt="Tutor Thumbnail 15">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (16).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (16).jpg" alt="Tutor Thumbnail 16">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="Tutorial Thumbnails/Tutor Thumbnail (17).jpg"><img
+            src="Tutorial Thumbnails/Tutor Thumbnail (17).jpg" alt="Tutor Thumbnail 17">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PSYCHOLOGICAL TAB -->
+    <div class="tab-content" id="tab-psychological">
+      <div class="portfolio-grid">
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (1).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (1).jpg" alt="Psy Thumbnail 1">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (2).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (2).jpg" alt="Psy Thumbnail 2">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (3).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (3).jpg" alt="Psy Thumbnail 3">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (4).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (4).jpg" alt="Psy Thumbnail 4">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (5).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (5).jpg" alt="Psy Thumbnail 5">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (6).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (6).jpg" alt="Psy Thumbnail 6">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (7).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (7).jpg" alt="Psy Thumbnail 7">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (8).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (8).jpg" alt="Psy Thumbnail 8">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (9).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (9).jpg" alt="Psy Thumbnail 9">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="grid-item" data-src="psychological Thumbnail/psy Thumbnail (10).jpg"><img
+            src="psychological Thumbnail/psy Thumbnail (10).jpg" alt="Psy Thumbnail 10">
+          <div class="grid-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" id="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="lightbox-nav prev" id="lb-prev"><i class="fa-solid fa-chevron-left"></i></button>
+      <img src="" alt="Preview" id="lightbox-img">
+      <button class="lightbox-nav next" id="lb-next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+
+  <!-- ========== A/B TESTING ========== -->
+  <section id="ab-testing" class="ab-testing">
+    <div class="section-header">
+      <span class="section-tag">Testing</span>
+      <h2 class="section-title">A/B Test Support</h2>
+      <p class="section-subtitle">I help creators test multiple thumbnail versions to find what actually gets more
+        clicks.</p>
+    </div>
+
+    <div class="ab-grid">
+      <div class="ab-card">
+        <div class="ab-label">Version A</div>
+        <img src="images/testthumb1.jpg" alt="A/B Test Thumbnail 1">
+        <h3>Primary Concept</h3>
+        <p>Primary concept testing for CTR improvement.</p>
+      </div>
+
+      <div class="ab-card winner">
+        <div class="ab-label winner-label">Version B <span class="win-badge">Winner ✓</span></div>
+        <img src="images/testthumb2.jpg" alt="A/B Test Thumbnail 2">
+        <h3>Alternative Layout</h3>
+        <p>Alternative layout and emotional trigger test.</p>
+      </div>
+
+      <div class="ab-card">
+        <div class="ab-label">Version C</div>
+        <img src="images/testthumb3.jpg" alt="A/B Test Thumbnail 3">
+        <h3>High-Contrast Hook</h3>
+        <p>High-contrast &amp; hook-focused experiment.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== MOBILE READABILITY ========== -->
+  <section id="mobile-readability" class="mobile-readability">
+    <div class="section-header">
+      <span class="section-tag">Design Philosophy</span>
+      <h2 class="section-title">Mobile-First Thumbnail Readability</h2>
+      <p class="section-subtitle">Most YouTube views come from mobile devices. I design thumbnails that stay clear,
+        readable, and attention-grabbing even at very small sizes.</p>
+    </div>
+
+    <div class="readability-flex">
+      <div class="readability-item laptop-container">
+        <img src="images/laptop.png" alt="YouTube Thumbnail on Laptop Interface">
+        <img src="images/photoshop-icon.png" alt="Photoshop Icon" class="icon-laptop">
+      </div>
+
+      <div class="readability-item mobile-container">
+        <img src="images/mobile.png" alt="Thumbnail visibility on mobile feed">
+        <img src="images/youtube-icon.png" alt="YouTube Icon" class="icon-mobile">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== RESULTS ========== -->
+  <section id="results" class="results">
+    <div class="section-header">
+      <span class="section-tag">Impact</span>
+      <h2 class="section-title">Results for Clients</h2>
+      <p class="section-subtitle">Real growth and visual impact delivered through strategic design</p>
+    </div>
+
+    <div class="results-container">
+      <div class="results-row-top">
+        <div class="result-card retouch-hero">
+          <div class="thumbnail-frame-large">
+            <img src="images/retouch-characterr.jpg" alt="Character Retouching">
+            <div class="comparison-tag">Before &amp; After Showcase</div>
+          </div>
+          <div class="result-info-hero">
+            <h3>Character Retouching &amp; Polish</h3>
+            <p>Professional skin retouching and lighting adjustments to make thumbnails pop.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-row-bottom">
+        <div class="result-card stat-card">
+          <div class="stat-icon">📈</div>
+          <div class="glow-number">+40% CTR</div>
+          <p>Average click-through rate increase for tech niche redesigns</p>
+        </div>
+        <div class="result-card stat-card">
+          <div class="stat-icon">🚀</div>
+          <div class="glow-number">2x Views</div>
+          <p>Documented growth for education channels after visual overhaul</p>
+        </div>
+        <div class="result-card stat-card">
+          <div class="stat-icon">👑</div>
+          <div class="glow-number">Top Brand</div>
+          <p>Developed consistent visual systems for elite content creators</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section id="experience" class="experience">
+    <div class="section-header">
+      <span class="section-tag">Journey</span>
+      <h2 class="section-title">Experience</h2>
+      <p class="section-subtitle">My professional journey in the creative world.</p>
+    </div>
+
+    <div class="experience-grid">
+      <div class="experience-card">
+        <div class="exp-icon">🎯</div>
+        <div class="exp-content">
+          <h3>Thumbnail &amp; Visual Designer</h3>
+          <span class="exp-date">2023 - Present</span>
+          <p>Designing high-converting YouTube thumbnails and visual assets for international creators. Focused on CTR
+            optimization, visual storytelling, and A/B testing.</p>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="exp-icon">📱</div>
+        <div class="exp-content">
+          <h3>Social Media Post Designer</h3>
+          <span class="exp-date">2023 - Present</span>
+          <p>Creating engaging social media graphics including posts, carousels, and promotional creatives for strong
+            brand presence across platforms.</p>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="exp-icon">🎨</div>
+        <div class="exp-content">
+          <h3>Graphic Designer</h3>
+          <span class="exp-date">2023 - Present</span>
+          <p>Delivering complete design solutions including banners, covers, ads, and marketing visuals using Adobe
+            Photoshop and Illustrator.</p>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="exp-icon">📊</div>
+        <div class="exp-content">
+          <h3>Content &amp; Visual Design Support</h3>
+          <span class="exp-date">2023 - Present</span>
+          <p>Supporting creators and brands with A/B test thumbnails, creative strategy, and visual optimization to
+            improve engagement and performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== PRICING ========== -->
+  <section id="pricing" class="pricing">
+    <div class="section-header">
+      <span class="section-tag">Investment</span>
+      <h2 class="section-title">Standard Rates</h2>
+      <p class="section-subtitle">Investing in professional visual strategy to dominate your niche</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="rate-card">
+        <div class="rate-top">
+          <span class="category">The Essential</span>
+          <h3>Quick Thumbnail</h3>
+          <div class="rate-amount">$10</div>
+        </div>
+        <div class="rate-body">
+          <p>Perfect for daily uploaders needing a fast, high-quality visual punch without the wait.</p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> 24-Hour Turnaround</li>
+            <li><i class="fa-solid fa-check"></i> Optimized for Mobile/Desktop</li>
+            <li><i class="fa-solid fa-check"></i> Standard Color Grading</li>
+          </ul>
+          <a href="#contact" class="rate-btn">Get Started</a>
+        </div>
+      </div>
+
+      <div class="rate-card highlighted">
+        <div class="popular-badge">⭐ Most Popular</div>
+        <div class="rate-top">
+          <span class="category">The Signature</span>
+          <h3>High-End Contrast</h3>
+          <div class="rate-amount">$15</div>
+        </div>
+        <div class="rate-body">
+          <p>Our flagship service. Focused on depth, lighting, and psychological triggers to win the click.</p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> Advanced Character Retouching</li>
+            <li><i class="fa-solid fa-check"></i> Cinematic Lighting &amp; Depth</li>
+            <li><i class="fa-solid fa-check"></i> High-CTR Composition Strategy</li>
+          </ul>
+          <a href="#contact" class="rate-btn">Get Started</a>
+        </div>
+      </div>
+
+      <div class="rate-card">
+        <div class="rate-top">
+          <span class="category">The Strategic</span>
+          <h3>A/B Variant Pack</h3>
+          <div class="rate-amount">$20</div>
+        </div>
+        <div class="rate-body">
+          <p>For data-driven creators. Two distinct versions to test which visual style performs best.</p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> Two Unique Design Directions</li>
+            <li><i class="fa-solid fa-check"></i> Iterative Testing Support</li>
+            <li><i class="fa-solid fa-check"></i> Priority Studio Queue</li>
+          </ul>
+          <a href="#contact" class="rate-btn">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-footer">
+      <p>Custom project? <a href="#contact">Let's talk strategy.</a></p>
+    </div>
+  </section>
+
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="contact">
+    <div class="section-header">
+      <span class="section-tag">Let's Connect</span>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-subtitle">Click a platform below to start your project.</p>
+    </div>
+
+    <div class="contact-grid">
+      <a href="https://www.fiverr.com/s/EgAo5Py" target="_blank" class="contact-card fiverr" id="contact-fiverr">
+        <div class="card-icon"><span class="fiverr-letter">f</span></div>
+        <div class="card-content">
+          <span>Order on</span>
+          <strong>Fiverr</strong>
+        </div>
+        <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+      </a>
+
+      <a href="http://bit.ly/4qeF6wi" target="_blank" class="contact-card upwork" id="contact-upwork">
+        <div class="card-icon"><i class="fa-brands fa-upwork"></i></div>
+        <div class="card-content">
+          <span>Hire on</span>
+          <strong>Upwork</strong>
+        </div>
+        <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+      </a>
+
+      <a href="https://wa.me/923368349562" target="_blank" class="contact-card whatsapp" id="contact-whatsapp">
+        <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="card-content">
+          <span>Chat on</span>
+          <strong>WhatsApp</strong>
+        </div>
+        <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+      </a>
+
+      <a href="mailto:shoaibahmadabduljalil@email.com" class="contact-card email" id="contact-email">
+        <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="card-content">
+          <span>Send an</span>
+          <strong>Email</strong>
+        </div>
+        <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p>© 2025 <span>Shoaib Ahmed</span> · YouTube Thumbnail Designer · All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
